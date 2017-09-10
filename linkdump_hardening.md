@@ -6,3 +6,4 @@
 1. [RPI Security Tips](http://kamilslab.com/2017/01/29/5-best-basic-security-tips-and-tricks-every-raspberry-pi-user-needs-to-take/)
 1. [Kiosk Mode RPI](https://raspberrypi.stackexchange.com/questions/9215/how-to-set-up-kiosk-mode-in-raspbian)
 1. [Chromium without LXDE](https://stackoverflow.com/questions/18449308/start-chromium-without-starting-desktop-lxde)
+1. [Hardening Guide Hackster.io](https://www.hackster.io/charifmahmoudi/iot-security-tips-to-protect-your-device-from-bad-hackers-768093?ref=channel&ref_id=3061_popular___&offset=18)
