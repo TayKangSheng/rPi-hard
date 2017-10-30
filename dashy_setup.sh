@@ -18,7 +18,8 @@ function dashprint() {
 
 dashprint "Initialising Dashy Setup for Raspberry PI" "special"
 
-# Setting Locales
+dashprint "Setting Locales" "special"
+# TODO: Directly set values
 sudo dpkg-reconfigure locales
 sudo dpkg-reconfigure keyboard-configuration
 sudo dpkg-reconfigure tzdata
@@ -31,6 +32,8 @@ sudo dpkg-reconfigure tzdata
 # printf "%s\n" "setxkbmap us" >> ~/.bashrc
 
 # Install Dashy Base Packages
+dashprint "Install dashy base packages" "special"
+sudo apt-get update
 dashy_base_packages=(chromium-browser x11-xserver-utils unclutter vim)
 for i in "${dashy_base_packages[@]}"
 do
@@ -54,4 +57,4 @@ printf "%s\n" "set number" >> ~/.vimrc
 dashprint "Editing autostart script"
 
 printf "\n" >> ~/.config/lxsession/LXDE-pi/autostart
-printf "%s\n" "/usr/bin/chromium-browser --test-type --no-default-browser-check --no-first-run --disable-infobars --disable-session-crashed-bubble --ignor    e-certificate-errors --start-fullscreen https://www.google.com.sg" >> ~/.config/lxsession/LXDE-pi/autostart
+printf "%s\n" "/usr/bin/chromium-browser --test-type --no-default-browser-check --no-first-run --disable-infobars --disable-session-crashed-bubble --ignore-certificate-errors --start-fullscreen https://www.google.com.sg" >> ~/.config/lxsession/LXDE-pi/autostart
